@@ -50,7 +50,7 @@ useEffect(() => {
 
   const alreadyLoggedIn = (e) => {
     Alert.alert("You're already logged in");
-    console.log("You're already logged in!");
+    console.log("You're already logged in, fool!");
   };
 
   const loginUser = () => {
