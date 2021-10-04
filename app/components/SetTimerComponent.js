@@ -1,7 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 
 // import firebase from "firebase/app";
 // import "firebase/auth";
@@ -17,18 +15,13 @@ function SetTimerComponent(props) {
 
       <View style={styles.setTimerInner}>
         <TouchableOpacity
+          style={[styles.button, {paddingVertical:8}]}
           onPress={props.pressFunctionMinus}
           disabled={props.disabled}
         >
-          <Text style={styles.button}>
-           {/*
-           <FontAwesomeIcon
-              style={styles.buttonText}
-              icon={faMinus}
-              color={Colors.black}
-            />
-           */}
-          </Text>
+        <Image
+        style={styles.tinyImage}
+        source={require("../assets/minus-solid.png")}/>
         </TouchableOpacity>
 
         <View id={props.timeName} style={[styles.button, styles.display]}>
@@ -36,18 +29,13 @@ function SetTimerComponent(props) {
         </View>
 
         <TouchableOpacity
+          style={[styles.button, {paddingVertical:8}]}
           onPress={props.pressFunctionPlus}
           disabled={props.disabled}
         >
-          <Text style={styles.button}>
-           {/*
-           <FontAwesomeIcon
-              style={styles.buttonText}
-              icon={faPlus}
-              color={Colors.black}
-            />
-           */}
-          </Text>
+        <Image
+        style={styles.tinyImage}
+        source={require("../assets/plus-solid.png")}/>
         </TouchableOpacity>
       </View>
     </View>
@@ -61,6 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.fadedWhite,
     borderRadius: 5,
     alignItems: "center",
+    alignContent: "center",
     height: 56,
   },
   buttonText: {
@@ -69,8 +58,9 @@ const styles = StyleSheet.create({
   },
   display: {
     flex: 1,
+    // width: 200,
     color: Colors.black,
-    marginHorizontal: 3,
+    marginHorizontal: 15,
     justifyContent: "center",
     paddingVertical: 0,
   },
@@ -86,8 +76,14 @@ const styles = StyleSheet.create({
   },
   setTimerInner: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    alignContent: "center",
+    alignItems: "center",
     marginBottom: 12,
+  },
+  tinyImage: {
+    width: 40,
+    height: 40,
   },
   titleView: {
     textAlign: "left",

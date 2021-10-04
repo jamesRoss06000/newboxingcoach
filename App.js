@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 
+import LogoTitle from "./app/components/LogoTitle";
+import Colors from "./app/config/Colors";
 import FirebaseKeys from "./app/config/FirebaseKeys";
 import firebase from "firebase/app";
 import Constants from "expo-constants";
@@ -13,9 +15,6 @@ import OptionsPage from "./app/screens/OptionsPage";
 import TrainingPage from "./app/screens/TrainingPage";
 import PurchasePage from "./app/screens/PurchasePage";
 import ForgotPassword from "./app/screens/ForgotPassword";
-
-import LogoTitle from "./app/config/LogoTitle";
-import Colors from "./app/config/Colors";
 
 export default function App() {
   return <AppContainer />;
