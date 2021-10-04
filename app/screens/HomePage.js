@@ -144,20 +144,20 @@ useEffect(() => {
           <TouchableOpacity onPress={loginUser}>
             <View>
               <Text style={styles.buttonText}>
-                {loggedIn == true ? "GO TRAINING!" : "LOGIN AND TRAIN!"}
+                {[loggedIn == true ? "GO TRAINING!" : "LOGIN AND TRAIN! ",  styles.textCenter]}
               </Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={loggedIn == true ? styles.hidden : ""}>
+        <View style={[loggedIn == true ? styles.hidden : "", styles.textCenter]}>
           <ClickableTextBtn
             text="PAY €1.99 FOR FULL ACCESS"
             pressFunction={pressPurchase}
           />
         </View>
 
-        <View style={loggedIn == true ? styles.hidden : ""}>
+        <View style={[loggedIn == true ? styles.hidden : "", styles.textCenter]}>
           <ClickableTextBtn
             text="USE FREE VERSION"
             pressFunction={pressFreeVersion}
@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
   bottom: {
     position: "absolute",
     bottom: 0,
+    width: "100%",
     flexDirection: "row",
   },
   button: {
@@ -228,6 +229,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: "100%",
   },
+  textCenter : {
+    textAlign: 'center',
+  }
 });
 
 export default HomePage;

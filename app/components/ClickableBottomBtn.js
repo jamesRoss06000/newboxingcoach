@@ -8,7 +8,7 @@ import Colors from "../config/Colors";
 
 function ClickableBottomBtn(props) {
   return (
-    <TouchableOpacity onPress={props.pressFunction}>
+    <TouchableOpacity onPress={props.pressFunction} style={styles.buttonContainer}>
       <View style={styles.aboutButton}>
         <Text style={styles.aboutButtonText}>{props.text}</Text>
       </View>
@@ -18,7 +18,7 @@ function ClickableBottomBtn(props) {
 
 const styles = StyleSheet.create({
   aboutButton: {
-    width: "50%",
+    width: "100%",
     padding: 10,
     backgroundColor: Colors.fadedWhite,
     textAlign: "center",
@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
     color: Colors.white,
     textTransform: "uppercase",
   },
+  buttonContainer: {
+    width: '50%',
+  }
 });
 
 export default ClickableBottomBtn;
