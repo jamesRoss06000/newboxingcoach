@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   tinyImage: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 38,
   },
   titleView: {
     textAlign: "left",

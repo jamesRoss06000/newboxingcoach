@@ -30,7 +30,9 @@ const styles = StyleSheet.create({
     color: Colors.black,
     fontWeight: "bold",
     fontSize: 18,
+    textAlign: "center",
   },
+  
 });
 
 export default ClickableTextBtn;

@@ -143,8 +143,8 @@ useEffect(() => {
 
           <TouchableOpacity onPress={loginUser}>
             <View>
-              <Text style={styles.buttonText}>
-                {[loggedIn == true ? "GO TRAINING!" : "LOGIN AND TRAIN! ",  styles.textCenter]}
+              <Text style={[styles.buttonText,  styles.textCenter]}>
+                {loggedIn == true ? "GO TRAINING!" : "LOGIN AND TRAIN! "}
               </Text>
             </View>
           </TouchableOpacity>

@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   aboutButtonText: {
     color: Colors.white,
     textTransform: "uppercase",
+    textAlign: "center",
   },
   buttonContainer: {
     width: '50%',

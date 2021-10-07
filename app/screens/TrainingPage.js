@@ -37,7 +37,7 @@ class TrainingPage extends React.Component {
   pressBegin() {
     this.setState((state) => {
       return {
-        intervalID: setInterval(this.timer, 10),
+        intervalID: setInterval(this.timer, 1000),
       };
     });
   }
