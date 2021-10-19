@@ -19,9 +19,10 @@ function SetTimerComponent(props) {
           onPress={props.pressFunctionMinus}
           disabled={props.disabled}
         >
-        <Image
+          <Text style={styles.plusMinus}>-</Text>
+        {/*<Image
         style={styles.tinyImage}
-        source={require("../assets/minus-solid.png")}/>
+        source={require("../assets/minus-solid.png")}/>*/}
         </TouchableOpacity>
 
         <View id={props.timeName} style={[styles.button, styles.display]}>
@@ -29,13 +30,14 @@ function SetTimerComponent(props) {
         </View>
 
         <TouchableOpacity
-          style={[styles.button, {paddingVertical:8}]}
+          style={styles.button}
           onPress={props.pressFunctionPlus}
           disabled={props.disabled}
         >
-        <Image
+          <Text style={styles.plusMinus}>+</Text>
+       {/* <Image
         style={styles.tinyImage}
-        source={require("../assets/plus-solid.png")}/>
+       source={require("../assets/plus-solid.png")}/>*/}
         </TouchableOpacity>
       </View>
     </View>
@@ -45,7 +47,7 @@ function SetTimerComponent(props) {
 const styles = StyleSheet.create({
   button: {
     marginBottom: 3,
-    padding: 20,
+    paddingHorizontal: 20,
     backgroundColor: Colors.fadedWhite,
     borderRadius: 5,
     alignItems: "center",
@@ -66,6 +68,11 @@ const styles = StyleSheet.create({
   },
   displayText: {
     fontSize: 23,
+    fontWeight: "bold",
+  },
+  plusMinus: {
+    fontSize: 40,
+    lineHeight: 40,
     fontWeight: "bold",
   },
   setTimer: {
