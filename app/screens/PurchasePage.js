@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet, Text, ImageBackground, Linking } from "react-native";
-import { StripeProvider } from "@stripe/stripe-react-native";
-import { fetechPublishableKey } from "../config/Helpers";
+import { CardField } from "@stripe/stripe-react-native";
+
 
 import HeaderStyles from "../config/HeaderStyles";
 import Colors from "../config/Colors";
@@ -35,10 +35,6 @@ function PurchasePage(props) {
   };
 
   return (
-    <StripeProvider
-      publishableKey={publishableKey}
-      merchantIdentifier="merchant.identifier"
-     >
       <ImageBackground
         style={styles.bgImage}
         source={require("../assets/pexels-ivan-samkov-bw.jpg")}
@@ -48,10 +44,12 @@ function PurchasePage(props) {
             <Text style={HeaderStyles.smallTitle}>PURCHASE FULL ACCESS</Text>
           </View>
 
-          <View style={styles.bodyView}></View>
+          <View style={styles.bodyView}>
+          <CardField style={styles} />
+          <Text style={HeaderStyles.smallTitle}>TEST</Text>
+          </View>
         </View>
       </ImageBackground>
-    </StripeProvider>
   );
 }
 
@@ -60,6 +58,11 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     height: "100%",
+  },
+  cardField: {
+    width: '100%',
+    height: 50,
+    marginBottom: 20,
   },
   container: {
     flex: 1,
